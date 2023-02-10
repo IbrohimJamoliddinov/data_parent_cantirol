@@ -4,6 +4,7 @@ import 'package:data_lesson/src/ui/parent_control/person_screen.dart';
 import 'package:data_lesson/src/ui/parent_control/tasks_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:jiffy/jiffy.dart';
 
 class TasksWidget extends StatefulWidget {
   const TasksWidget({Key? key}) : super(key: key);
@@ -80,7 +81,7 @@ class _TasksWidgetState extends State<TasksWidget> {
           ),
         ),
         const SizedBox(height: 24),
-        Text("${selectedDay.day} ${selectedDay.month}, ${selectedDay.year}"),
+        Text(Jiffy(selectedDay).yMMMMd),
         Expanded(
           child: StreamBuilder(
               stream: tasksBloc.getTask,

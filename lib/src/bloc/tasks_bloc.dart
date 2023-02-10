@@ -19,6 +19,7 @@ class TasksBloc {
   getPerson(int userId, DateTime dateTime) async {
     List<AddTasksModel> data = await databaseHelper.getSort(userId, dateTime);
     _fetchGetTask.sink.add(data);
+    print(data);
   }
 
 

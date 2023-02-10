@@ -36,7 +36,7 @@ class TasksScreen extends StatefulWidget {
 class _TasksScreenState extends State<TasksScreen> {
   DatabaseHelper databaseHelper = DatabaseHelper();
   int userId = personId!.id;
-  DateTime selectedDay = DateTime.now();
+  DateTime selectedDay = DateTime.now().add(const Duration(days: 22));
 
   @override
   void initState() {
