@@ -36,10 +36,11 @@ class _TasksWidgetState extends State<TasksWidget> {
             physics: const NeverScrollableScrollPhysics(),
             itemCount: 7,
             itemBuilder: (context, index) {
-              DateTime dateTime = DateTime.now().add(Duration(days: (index)));
+              DateTime dateTimeIn =  DateTime.now().add(Duration(days: (index)));
               return GestureDetector(
                 onTap: () async {
-                  selectedDay = dateTime;
+                  selectedDay =dateTimeIn;
+                  dateTime=selectedDay;
                   tasksBloc.getPerson(
                     personId!.id,
                     selectedDay,
@@ -53,21 +54,21 @@ class _TasksWidgetState extends State<TasksWidget> {
                       right: (MediaQuery.of(context).size.width - 64 - 32 * 7) /
                           6),
                   decoration: BoxDecoration(
-                    color: selectedDay.day == dateTime.day
+                    color: selectedDay.day == DateTime.now().day+index
                         ? const Color(0xFF0051EE)
                         : Colors.transparent,
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(
-                        color: selectedDay.day == dateTime.day
+                        color: selectedDay.day == DateTime.now().day+index
                             ? const Color(0xFF0051EE)
                             : const Color(0xFFE8E8E8),
                         width: 1),
                   ),
                   child: Center(
                     child: Text(
-                      weekdays[dateTime.weekday - 1],
+                      weekdays[dateTimeIn.weekday - 1],
                       style: TextStyle(
-                        color: selectedDay.day == dateTime.day
+                        color: selectedDay.day == DateTime.now().day+index
                             ? Colors.white
                             : Colors.black,
                         fontWeight: FontWeight.w400,

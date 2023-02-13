@@ -2,6 +2,7 @@ import 'package:data_lesson/src/ui/parent_control/tasks_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:jiffy/jiffy.dart';
 
 class AddTasksWidget extends StatefulWidget {
   final DateTime selectedDate;
@@ -37,15 +38,13 @@ class _AddTasksWidgetState extends State<AddTasksWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      // physics: const NeverScrollableScrollPhysics(),
+    return ListView(
       children: [
         const SizedBox(
           height: 24,
         ),
-        Text(
-          "${widget.selectedDate.day} ${widget.selectedDate.month} ${widget.selectedDate.year}",
-          textAlign: TextAlign.center,
+        Text(Jiffy(dateTime).yMMMMd,
+        textAlign: TextAlign.center,
         ),
         const SizedBox(
           height: 20,
