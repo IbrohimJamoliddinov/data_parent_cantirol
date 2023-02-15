@@ -117,7 +117,7 @@ class DatabaseHelper {
   ) async {
     var dbClient = await db;
     List<Map> list = await dbClient.rawQuery(
-        'SELECT * FROM tasks WHERE userId=$userId and createDay=${dateTime.day} and createYear = ${dateTime.month} and createMonth = ${dateTime.year}');
+        'SELECT * FROM tasks WHERE userId=$userId and createDay=${dateTime.day} and createYear = ${dateTime.year} and createMonth = ${dateTime.month}');
     List<AddTasksModel> data = [];
     if (list.isNotEmpty) {
       for (int i = 0; i < list.length; i++) {

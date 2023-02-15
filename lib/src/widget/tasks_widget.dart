@@ -14,8 +14,17 @@ class TasksWidget extends StatefulWidget {
 }
 
 class _TasksWidgetState extends State<TasksWidget> {
-  DateTime selectedDay = DateTime.now();
+  DateTime selectedDay = dateTime;
   List<String> weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+@override
+void initState() {
+  tasksBloc.getPerson(
+    personId!.id,
+    selectedDay,
+  );
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -81,8 +90,9 @@ class _TasksWidgetState extends State<TasksWidget> {
             },
           ),
         ),
-        const SizedBox(height: 24),
+        const SizedBox(height: 18),
         Text(Jiffy(selectedDay).yMMMMd),
+        const SizedBox(height: 8),
         Expanded(
           child: StreamBuilder(
               stream: tasksBloc.getTask,

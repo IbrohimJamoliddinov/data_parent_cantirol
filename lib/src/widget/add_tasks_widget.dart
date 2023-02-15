@@ -235,178 +235,178 @@ class _AddTasksWidgetState extends State<AddTasksWidget> {
         const SizedBox(
           height: 12,
         ),
-        Container(
-          height: 56,
-          width: MediaQuery.of(context).size.width - 32,
-          margin: const EdgeInsets.symmetric(horizontal: 16),
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          decoration: BoxDecoration(
-            border: Border.all(color: const Color(0xFFE4E4E4), width: 1),
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Row(
-            children: [
-              Container(
-                width: 24,
-                height: 24,
-                decoration: BoxDecoration(
-                    color: selectedColor,
-                    borderRadius: BorderRadius.circular(4)),
-              ),
-              const SizedBox(
-                width: 16,
-              ),
-              const Text(
-                "Color",
-              ),
-              const Spacer(),
-              GestureDetector(
-                onTap: () {
-                  setState(() {
-                    showModalBottomSheet(
-                        context: context,
-                        builder: (builder) {
-                          return SizedBox(
-                            height: 280,
-                            child: Column(
-                              children: [
-                                const SizedBox(
-                                  height: 30,
-                                ),
-                                const Text(
-                                  "Color for task background",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                                const SizedBox(
-                                  height: 44,
-                                ),
-                                Expanded(
-                                  child: ListView.builder(
-                                      physics:
-                                          const NeverScrollableScrollPhysics(),
-                                      itemCount: 2,
-                                      itemBuilder: (context, index) {
-                                        return Container(
-                                          margin:
-                                              const EdgeInsets.only(bottom: 16),
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: [
-                                              GestureDetector(
-                                                onTap: () {
-                                                  selectedColor =
-                                                      colors[5 * index];
-                                                  bgColor = 5 * index;
-                                                  Navigator.pop(context);
-                                                  setState(() {});
-                                                },
-                                                child: Container(
-                                                  height: 56,
-                                                  width: 56,
-                                                  decoration: BoxDecoration(
-                                                    color: colors[5 * index],
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            28),
-                                                  ),
-                                                ),
-                                              ),
-                                              GestureDetector(
-                                                onTap: () {
-                                                  selectedColor =
-                                                      colors[5 * index + 1];
-                                                  bgColor = 5 * index + 1;
-                                                  Navigator.pop(context);
-                                                  setState(() {});
-                                                },
-                                                child: Container(
-                                                  height: 56,
-                                                  width: 56,
-                                                  decoration: BoxDecoration(
-                                                    color:
-                                                        colors[5 * index + 1],
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            28),
-                                                  ),
-                                                ),
-                                              ),
-                                              GestureDetector(
-                                                onTap: () {
-                                                  selectedColor =
-                                                      colors[5 * index + 2];
-                                                  bgColor = 5 * index + 2;
-                                                  Navigator.pop(context);
-                                                  setState(() {});
-                                                },
-                                                child: Container(
-                                                  height: 56,
-                                                  width: 56,
-                                                  decoration: BoxDecoration(
-                                                    color:
-                                                        colors[5 * index + 2],
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            28),
-                                                  ),
-                                                ),
-                                              ),
-                                              GestureDetector(
-                                                onTap: () {
-                                                  selectedColor =
-                                                      colors[5 * index + 3];
-                                                  bgColor = 5 * index + 3;
-                                                  Navigator.pop(context);
-                                                  setState(() {});
-                                                },
-                                                child: Container(
-                                                  height: 56,
-                                                  width: 56,
-                                                  decoration: BoxDecoration(
-                                                    color:
-                                                        colors[5 * index + 3],
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            28),
-                                                  ),
-                                                ),
-                                              ),
-                                              GestureDetector(
-                                                onTap: () {
-                                                  selectedColor =
-                                                      colors[5 * index + 4];
-                                                  bgColor = 5 * index + 4;
-                                                  Navigator.pop(context);
-                                                  setState(() {});
-                                                },
-                                                child: Container(
-                                                  height: 56,
-                                                  width: 56,
-                                                  decoration: BoxDecoration(
-                                                    color:
-                                                        colors[5 * index + 4],
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            28),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        );
-                                      }),
-                                )
-                              ],
+        GestureDetector(
+          onTap: () {
+            setState(() {
+              showModalBottomSheet(
+                  context: context,
+                  builder: (builder) {
+                    return SizedBox(
+                      height: 280,
+                      child: Column(
+                        children: [
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          const Text(
+                            "Color for task background",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 20,
                             ),
-                          );
-                        });
+                          ),
+                          const SizedBox(
+                            height: 44,
+                          ),
+                          Expanded(
+                            child: ListView.builder(
+                                physics:
+                                const NeverScrollableScrollPhysics(),
+                                itemCount: 2,
+                                itemBuilder: (context, index) {
+                                  return Container(
+                                    margin:
+                                    const EdgeInsets.only(bottom: 16),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                      children: [
+                                        GestureDetector(
+                                          onTap: () {
+                                            selectedColor =
+                                            colors[5 * index];
+                                            bgColor = 5 * index;
+                                            Navigator.pop(context);
+                                            setState(() {});
+                                          },
+                                          child: Container(
+                                            height: 56,
+                                            width: 56,
+                                            decoration: BoxDecoration(
+                                              color: colors[5 * index],
+                                              borderRadius:
+                                              BorderRadius.circular(
+                                                  28),
+                                            ),
+                                          ),
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            selectedColor =
+                                            colors[5 * index + 1];
+                                            bgColor = 5 * index + 1;
+                                            Navigator.pop(context);
+                                            setState(() {});
+                                          },
+                                          child: Container(
+                                            height: 56,
+                                            width: 56,
+                                            decoration: BoxDecoration(
+                                              color:
+                                              colors[5 * index + 1],
+                                              borderRadius:
+                                              BorderRadius.circular(
+                                                  28),
+                                            ),
+                                          ),
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            selectedColor =
+                                            colors[5 * index + 2];
+                                            bgColor = 5 * index + 2;
+                                            Navigator.pop(context);
+                                            setState(() {});
+                                          },
+                                          child: Container(
+                                            height: 56,
+                                            width: 56,
+                                            decoration: BoxDecoration(
+                                              color:
+                                              colors[5 * index + 2],
+                                              borderRadius:
+                                              BorderRadius.circular(
+                                                  28),
+                                            ),
+                                          ),
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            selectedColor =
+                                            colors[5 * index + 3];
+                                            bgColor = 5 * index + 3;
+                                            Navigator.pop(context);
+                                            setState(() {});
+                                          },
+                                          child: Container(
+                                            height: 56,
+                                            width: 56,
+                                            decoration: BoxDecoration(
+                                              color:
+                                              colors[5 * index + 3],
+                                              borderRadius:
+                                              BorderRadius.circular(
+                                                  28),
+                                            ),
+                                          ),
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            selectedColor =
+                                            colors[5 * index + 4];
+                                            bgColor = 5 * index + 4;
+                                            Navigator.pop(context);
+                                            setState(() {});
+                                          },
+                                          child: Container(
+                                            height: 56,
+                                            width: 56,
+                                            decoration: BoxDecoration(
+                                              color:
+                                              colors[5 * index + 4],
+                                              borderRadius:
+                                              BorderRadius.circular(
+                                                  28),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  );
+                                }),
+                          )
+                        ],
+                      ),
+                    );
                   });
-                },
-                child: Container(
+            });
+          },
+          child: Container(
+            height: 56,
+            width: MediaQuery.of(context).size.width - 32,
+            margin: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            decoration: BoxDecoration(
+              border: Border.all(color: const Color(0xFFE4E4E4), width: 1),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  width: 24,
+                  height: 24,
+                  decoration: BoxDecoration(
+                      color: selectedColor,
+                      borderRadius: BorderRadius.circular(4)),
+                ),
+                const SizedBox(
+                  width: 16,
+                ),
+                const Text(
+                  "Color",
+                ),
+                const Spacer(),
+                Container(
                   width: 24,
                   height: 24,
                   color: Colors.transparent,
@@ -415,8 +415,8 @@ class _AddTasksWidgetState extends State<AddTasksWidget> {
                     fit: BoxFit.scaleDown,
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ],

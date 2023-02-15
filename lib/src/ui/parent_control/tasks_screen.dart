@@ -94,7 +94,7 @@ class _TasksScreenState extends State<TasksScreen> {
             )
           ],
         ),
-        body: Column(
+        body: ListView(
           children: [
             Container(
               width: MediaQuery.of(context).size.width - 32,
@@ -104,59 +104,63 @@ class _TasksScreenState extends State<TasksScreen> {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: ListView(
+              child: Stack(
                 children: [
                   Container(
                     margin:
-                        const EdgeInsets.only( bottom: 42),
+                        const EdgeInsets.only( bottom: 104),
                     width: MediaQuery.of(context).size.width - 32,
-                    height: MediaQuery.of(context).size.height - 332,
                     child: !isAddTask
                         ? const TasksWidget()
                         : AddTasksWidget(
                             selectedDate: dateTime,
                           ),
                   ),
-                  GestureDetector(
-                    onTap: () async {
-                      if (isAddTask) {
-                        if (titleNameController.text.isNotEmpty &&
-                            startTime != finishTime) {
-                          await databaseHelper.addTasks(
-                            AddTasksModel(
-                              titleName: titleNameController.text,
-                              createYear: dateTime.year,
-                              createMonth: dateTime.month,
-                              createDay: dateTime.day,
-                              startTime: startTime,
-                              finishTime: finishTime,
-                              bgColor: bgColor,
-                              userId: personId!.id,
-                            ),
-                          );
-                          isAddTask = false;
-                          titleNameController.clear();
+                  Positioned(
+                    bottom: 24,
+                    left: 10,
+                    right: 10,
+                    child: GestureDetector(
+                      onTap: () async {
+                        if (isAddTask) {
+                          if (titleNameController.text.isNotEmpty &&
+                              startTime != finishTime) {
+                            await databaseHelper.addTasks(
+                              AddTasksModel(
+                                titleName: titleNameController.text,
+                                createYear: dateTime.year,
+                                createMonth: dateTime.month,
+                                createDay: dateTime.day,
+                                startTime: startTime,
+                                finishTime: finishTime,
+                                bgColor: bgColor,
+                                userId: personId!.id,
+                              ),
+                            );
+                            isAddTask = false;
+                            titleNameController.clear();
+                          }
+                        } else {
+                          isAddTask = true;
                         }
-                      } else {
-                        isAddTask = true;
-                      }
-                      setState(() {});
-                    },
-                    child: Container(
-                      height: 56,
-                      width: 264,
-                      margin: const EdgeInsets.only(bottom: 32, right: 40, left: 40),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF0051EE),
-                        borderRadius: BorderRadius.circular(32),
-                      ),
-                      child: Center(
-                        child: Text(
-                          isAddTask ? "Save" : "+ Add task",
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),
+                        setState(() {});
+                      },
+                      child: Container(
+                        height: 56,
+                        width: 264,
+                        margin: const EdgeInsets.only( right: 40, left: 40),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF0051EE),
+                          borderRadius: BorderRadius.circular(32),
+                        ),
+                        child: Center(
+                          child: Text(
+                            isAddTask ? "Save" : "+ Add task",
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold),
+                          ),
                         ),
                       ),
                     ),
