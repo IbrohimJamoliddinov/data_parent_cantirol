@@ -17,23 +17,21 @@ class AddTasksWidget extends StatefulWidget {
 }
 
 TextEditingController titleNameController = TextEditingController();
-int startTime = 7;
-int finishTime = 8;
 int bgColor = 1;
+int startTime = DateTime.now().hour.toInt();
+int finishTime  = startTime + 2;
 
 class _AddTasksWidgetState extends State<AddTasksWidget> {
   bool keyboard = false;
   Color selectedColor = const Color(0xFFECECEC);
   FixedExtentScrollController firstController = FixedExtentScrollController();
   FixedExtentScrollController secondController = FixedExtentScrollController();
-  int startTime = 7;
-  int finishTime = 8;
+
 
   @override
   void initState() {
+
     super.initState();
-    firstController = FixedExtentScrollController(initialItem: startTime);
-    secondController = FixedExtentScrollController(initialItem: finishTime);
   }
 
   @override
