@@ -1,9 +1,10 @@
 import 'package:data_lesson/src/bloc/main_change_bloc.dart';
-import 'package:data_lesson/src/ui/parent_control/person_screen.dart';
-import 'package:data_lesson/src/ui/parent_control/settings_screen.dart';
-import 'package:data_lesson/src/ui/parent_control/tasks_screen.dart';
+import 'package:data_lesson/src/ui/parent_control/home/person_screen.dart';
+import 'package:data_lesson/src/ui/parent_control/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import 'parent_control/tasks/tasks_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);

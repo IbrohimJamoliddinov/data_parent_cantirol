@@ -13,7 +13,20 @@ class PersonScreen extends StatefulWidget {
 
 class _PersonScreenState extends State<PersonScreen> {
   final controller = PageController(initialPage: 0);
-  int selectedIndex = 0;
+  int
+
+
+
+
+
+
+
+
+
+
+
+
+  selectedIndex = 0;
 
 
   @override

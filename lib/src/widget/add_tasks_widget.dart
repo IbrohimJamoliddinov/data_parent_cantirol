@@ -1,5 +1,5 @@
 import 'package:data_lesson/src/bloc/tasks_bloc.dart';
-import 'package:data_lesson/src/ui/parent_control/tasks_screen.dart';
+import 'package:data_lesson/src/ui/parent_control/tasks/tasks_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -191,7 +191,7 @@ class _AddTasksWidgetState extends State<AddTasksWidget> {
                         height: 24,
                         color: Colors.transparent,
                         child: SvgPicture.asset(
-                          "assets/icons/botton.svg",
+                          "assets/icons/bottom.svg",
                           fit: BoxFit.scaleDown,
                         ),
                       ),
@@ -225,7 +225,7 @@ class _AddTasksWidgetState extends State<AddTasksWidget> {
                         height: 24,
                         color: Colors.transparent,
                         child: SvgPicture.asset(
-                          "assets/icons/botton.svg",
+                          "assets/icons/bottom.svg",
                           fit: BoxFit.scaleDown,
                         ),
                       ),
@@ -405,7 +405,7 @@ class _AddTasksWidgetState extends State<AddTasksWidget> {
                   height: 24,
                   color: Colors.transparent,
                   child: SvgPicture.asset(
-                    "assets/icons/botton.svg",
+                    "assets/icons/bottom.svg",
                     fit: BoxFit.scaleDown,
                   ),
                 ),

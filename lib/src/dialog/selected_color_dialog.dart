@@ -1,5 +1,3 @@
-import 'package:data_lesson/src/ui/parent_control/tasks_screen.dart';
-import 'package:data_lesson/src/widget/add_tasks_widget.dart';
 import 'package:flutter/material.dart';
 
 class BottomDialog {
