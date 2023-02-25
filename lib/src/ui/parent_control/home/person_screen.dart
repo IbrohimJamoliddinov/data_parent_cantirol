@@ -65,7 +65,6 @@ class _PersonScreenState extends State<PersonScreen> {
               onPageChanged: (index) {
                 selectedIndex = index;
                 personId = data[selectedIndex];
-                print(data[selectedIndex]);
                 setState(() {});
               },
               itemCount: data.length,

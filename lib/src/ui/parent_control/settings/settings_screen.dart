@@ -58,7 +58,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   height: 24,
                   color: Colors.transparent,
                   child: SvgPicture.asset(
-                    "assets/icons/right_botton.svg",
+                    "assets/icons/right_bottom.svg",
                     fit: BoxFit.scaleDown,
                   ),
                 ),
@@ -94,7 +94,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   height: 24,
                   color: Colors.transparent,
                   child: SvgPicture.asset(
-                    "assets/icons/right_botton.svg",
+                    "assets/icons/right_bottom.svg",
                     fit: BoxFit.scaleDown,
                   ),
                 ),
@@ -130,7 +130,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   height: 24,
                   color: Colors.transparent,
                   child: SvgPicture.asset(
-                    "assets/icons/right_botton.svg",
+                    "assets/icons/right_bottom.svg",
                     fit: BoxFit.scaleDown,
                   ),
                 ),
