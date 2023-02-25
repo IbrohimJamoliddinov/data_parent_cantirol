@@ -1,7 +1,7 @@
 import 'package:data_lesson/src/bloc/tasks_bloc.dart';
 import 'package:data_lesson/src/model/database/add_tasks_model.dart';
-import 'package:data_lesson/src/ui/parent_control/home/person_screen.dart';
-import 'package:data_lesson/src/ui/parent_control/tasks/tasks_screen.dart';
+import 'package:data_lesson/src/ui/menu/home/person_screen.dart';
+import 'package:data_lesson/src/ui/menu/tasks/tasks_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:jiffy/jiffy.dart';

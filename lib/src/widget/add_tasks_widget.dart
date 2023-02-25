@@ -1,5 +1,5 @@
 import 'package:data_lesson/src/bloc/tasks_bloc.dart';
-import 'package:data_lesson/src/ui/parent_control/tasks/tasks_screen.dart';
+import 'package:data_lesson/src/ui/menu/tasks/tasks_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'src/ui/main_screen.dart';
-import 'src/ui/parent_control/home/add_screen.dart';
+import 'src/ui/menu/home/add_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

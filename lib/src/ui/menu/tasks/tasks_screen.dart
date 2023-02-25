@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:data_lesson/src/bloc/tasks_bloc.dart';
 import 'package:data_lesson/src/database/database_helper.dart';
 import 'package:data_lesson/src/model/database/add_tasks_model.dart';
-import 'package:data_lesson/src/ui/parent_control/home/person_screen.dart';
+import 'package:data_lesson/src/ui/menu/home/person_screen.dart';
 import 'package:data_lesson/src/widget/add_tasks_widget.dart';
 import 'package:data_lesson/src/widget/tasks_widget.dart';
 import 'package:flutter/material.dart';
