@@ -22,7 +22,12 @@ class TasksBloc {
     print(data);
   }
 
+  getTimeType(int time) {
+    var type = time >= 12 ? "$time pm" : "$time am";
+    return type;
+  }
 
 }
+
 
 final tasksBloc = TasksBloc();

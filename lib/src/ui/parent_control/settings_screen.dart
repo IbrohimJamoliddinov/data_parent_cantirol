@@ -179,7 +179,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 border: Border.all(color: Colors.white)),
             child: const Center(
               child: Text(
-                "Add child",
+                "Add services",
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,

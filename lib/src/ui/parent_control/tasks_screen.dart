@@ -131,9 +131,9 @@ class _TasksScreenState extends State<TasksScreen> {
                                 createYear: dateTime.year,
                                 createMonth: dateTime.month,
                                 createDay: dateTime.day,
-                                startTime: startTime,
-                                finishTime: finishTime,
-                                bgColor: bgColor,
+                                startTime: startTime!,
+                                finishTime: finishTime!,
+                                bgColor: bgColor!,
                                 userId: personId!.id,
                               ),
                             );
